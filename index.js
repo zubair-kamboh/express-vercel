@@ -1,9 +1,9 @@
 const express = require('express')
 const axios = require('axios')
 const app = express()
+var cors = require('cors')
 
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(cors())
 
 app.get('/api', async (req, res) => {
   try {
